@@ -1,20 +1,41 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
+//Remember to have this part of the javascript invocation. 
+//connection.stream("Counter", 10, 500)
+//    .subscribe({
+//    next: (item) => {
+//        var li = document.createElement("li");
+//        li.textContent = item;
+//        document.getElementById("messagesList").appendChild(li);
+//    },
+//        complete: () => {
+//            var li = document.createElement("li");
+//            li.textContent = "Stream completed";
+//            document.getElementById("messagesList").appendChild(li);
+//        },
+//        error: (err) => {
+//            var li = document.createElement("li");
+//            li.textContent = err;
+//            document.getElementById("messagesList").appendChild(li);
+//        },
+//});
+
 namespace webApiTrader.Trades
 {
     public class StreamingHub : Hub
     {
-        public ChannelReader<int> Counter(
-    int count,
-    int delay,
-    CancellationToken cancellationToken)
+        public async Task SendMessage(string user, string message)
+        {
+            await Clients.All.SendAsync("receivemessage", user, message);
+        }
+
+        public ChannelReader<int> Counter(int count, int delay, CancellationToken cancellationToken)
         {
             var channel = Channel.CreateUnbounded<int>();
 
@@ -26,12 +47,7 @@ namespace webApiTrader.Trades
             return channel.Reader;
         }
 
-
-        private async Task WriteItemsAsync(
-    ChannelWriter<int> writer,
-    int count,
-    int delay,
-    CancellationToken cancellationToken)
+        private async Task WriteItemsAsync(ChannelWriter<int> writer, int count, int delay, CancellationToken cancellationToken)
         {
             Exception localException = null;
             try
@@ -39,7 +55,6 @@ namespace webApiTrader.Trades
                 for (var i = 0; i < count; i++)
                 {
                     await writer.WriteAsync(i, cancellationToken);
-
                     // Use the cancellationToken in other APIs that accept cancellation
                     // tokens so the cancellation can flow down to them.
                     await Task.Delay(delay, cancellationToken);
@@ -56,11 +71,7 @@ namespace webApiTrader.Trades
         }
 
         // Streaming data 
-        public async IAsyncEnumerable<int> CounterValue(
-        int count,
-        int delay,
-        [EnumeratorCancellation]
-        CancellationToken cancellationToken)
+        public async IAsyncEnumerable<int> CounterValue(int count, int delay, [EnumeratorCancellation]CancellationToken cancellationToken)
         {
             for (var i = 0; i < count; i++)
             {
@@ -76,18 +87,19 @@ namespace webApiTrader.Trades
             }
         }
 
-        // Client to server streaming
-        public async Task UploadStream(ChannelReader<string> stream)
-        {
-            while (await stream.WaitToReadAsync())
-            {
-                while (stream.TryRead(out var item))
-                {
-                    // do something with the stream item
-                    Console.WriteLine(item);
-                }
-            }
-        }
-
+        //// Client to server streaming
+        //public async Task UploadStream(ChannelReader<string> stream)
+        //{           
+        //    while (await stream.WaitToReadAsync())
+        //    {
+        //        while (stream.TryRead(out var item))
+        //        {
+        //            // do something with the stream item
+        //            Console.WriteLine(item);
+        //        }
+        //    }
+        //}
     }
+
+
 }

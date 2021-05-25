@@ -57,6 +57,7 @@ namespace webApiTrader
             {
                 endpoints.MapControllers();
                 endpoints.MapHub<EquityTradeHub>("/equityTrades");
+                endpoints.MapHub<StreamingHub>("/streamingHub");
             });
         }
     }
