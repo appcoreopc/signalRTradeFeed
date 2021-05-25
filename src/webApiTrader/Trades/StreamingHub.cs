@@ -6,20 +6,29 @@ using System.Threading;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
+//var connection3 = new signalR.HubConnectionBuilder().withUrl("wss://localhost:44320/streamingHub", {
+//    skipNegotiation: true,
+//    transport: signalR.HttpTransportType.WebSockets
+//}).build();
+
+//connection3.start()
 //Remember to have this part of the javascript invocation. 
-//connection.stream("Counter", 10, 500)
+//connection3.stream("Counter", 10, 500)
 //    .subscribe({
-//    next: (item) => {
+//    next: (item) =>
+//    {
 //        var li = document.createElement("li");
 //        li.textContent = item;
 //        document.getElementById("messagesList").appendChild(li);
 //    },
-//        complete: () => {
+//        complete: () =>
+//        {
 //            var li = document.createElement("li");
 //            li.textContent = "Stream completed";
 //            document.getElementById("messagesList").appendChild(li);
 //        },
-//        error: (err) => {
+//        error: (err) =>
+//        {
 //            var li = document.createElement("li");
 //            li.textContent = err;
 //            document.getElementById("messagesList").appendChild(li);
