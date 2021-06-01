@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDevOps.Integration.RES
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDevOps.Integration.Models", "AzureDevOps.Integration.Models\AzureDevOps.Integration.Models.csproj", "{8FB593EC-6EA4-443F-9F5E-95CC54C66634}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientApiTest", "ClientApiTest\ClientApiTest.csproj", "{7C3D67A6-EA45-4FA8-806C-286DF158E7FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8FB593EC-6EA4-443F-9F5E-95CC54C66634}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FB593EC-6EA4-443F-9F5E-95CC54C66634}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FB593EC-6EA4-443F-9F5E-95CC54C66634}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C3D67A6-EA45-4FA8-806C-286DF158E7FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C3D67A6-EA45-4FA8-806C-286DF158E7FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C3D67A6-EA45-4FA8-806C-286DF158E7FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C3D67A6-EA45-4FA8-806C-286DF158E7FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

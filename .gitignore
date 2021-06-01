@@ -30,3 +30,7 @@ src/webApiTrader/.vs/
 src/AzureDevOps.Integration.Models/obj/Debug/net5.0/AzureDevOps.Integration.Models.AssemblyInfoInputs.cache
 src/AzureDevOps.Integration.Models/obj/
 src/AzureDevOps.Integration/obj/
+src/AzureDevOps.Integration/bin/
+src/AzureDevOps.Integration.Models/bin/
+src/ClientApiTest/bin/
+src/ClientApiTest/obj/
