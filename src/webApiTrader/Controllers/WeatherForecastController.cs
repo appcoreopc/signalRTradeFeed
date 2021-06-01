@@ -32,6 +32,7 @@ namespace webApiTrader.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+
             _ctx.Clients.All.SendAsync("receivemessage", "test", "ulalalalalaa");
 
             var rng = new Random();
