@@ -34,3 +34,5 @@ src/AzureDevOps.Integration/bin/
 src/AzureDevOps.Integration.Models/bin/
 src/ClientApiTest/bin/
 src/ClientApiTest/obj/
+src/AzureDevOps.Integration.REST.UnitTests/bin/
+src/AzureDevOps.Integration.REST.UnitTests/obj/

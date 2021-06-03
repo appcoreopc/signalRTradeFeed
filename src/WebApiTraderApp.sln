@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDevOps.Integration.Mod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientApiTest", "ClientApiTest\ClientApiTest.csproj", "{7C3D67A6-EA45-4FA8-806C-286DF158E7FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDevOps.Integration.REST.UnitTests", "AzureDevOps.Integration.REST.UnitTests\AzureDevOps.Integration.REST.UnitTests.csproj", "{928FF98A-D0A5-48EE-A6B1-7D6D844E6F9B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{7C3D67A6-EA45-4FA8-806C-286DF158E7FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C3D67A6-EA45-4FA8-806C-286DF158E7FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C3D67A6-EA45-4FA8-806C-286DF158E7FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{928FF98A-D0A5-48EE-A6B1-7D6D844E6F9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{928FF98A-D0A5-48EE-A6B1-7D6D844E6F9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{928FF98A-D0A5-48EE-A6B1-7D6D844E6F9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{928FF98A-D0A5-48EE-A6B1-7D6D844E6F9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

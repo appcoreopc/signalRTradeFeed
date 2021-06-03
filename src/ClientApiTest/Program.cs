@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using AzureDevOps.Integration.Models.Pipeline.Run.Request;
 using AzureDevOps.Integration.REST.Clients;
 using Newtonsoft.Json;
 
@@ -34,17 +35,5 @@ namespace ClientApiTest
         }
     }
 
-    class RunPipelineRequest
-    {
-        public string Organization { get; set; }
-        public int PipelineId { get; set; }
-
-        public string Project { get; set; }
-
-        [JsonProperty("api-version")]
-        public string APIVersion { get; set; }
-
-        public int PipelineVersion { get; set; }
-            
-    }
+   
 }
