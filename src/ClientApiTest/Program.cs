@@ -20,7 +20,7 @@ namespace ClientApiTest
             // queue a build 
             // https://dev.azure.com/{organization}/{project}/_apis/build/builds?api-version=6.0
 
-            var newBuild = new RunPipeline
+            var newBuild = new RunPipelineRequest
             {
                 Organization = "WWNZ",
                 Project = "API", 
@@ -34,7 +34,7 @@ namespace ClientApiTest
         }
     }
 
-    class RunPipeline
+    class RunPipelineRequest
     {
         public string Organization { get; set; }
         public int PipelineId { get; set; }

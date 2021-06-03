@@ -1,20 +1,16 @@
-﻿using System.Collections.Generic;
+﻿
+using System.Collections.Generic;
 
-namespace AzureDevOps.Integration.Models.Pipeline
-{
-    // Listing availabile pipeline //
-
-    public class Self
+namespace AzureDevOps.Integration.Models.Build.List
+{    public class Self
     {
         public string href { get; set; }
     }
-
-    public class Web
+        public class Web
     {
         public string href { get; set; }
     }
-
-    public class Links
+        public class Links
     {
         public Self self { get; set; }
         public Web web { get; set; }
@@ -30,9 +26,9 @@ namespace AzureDevOps.Integration.Models.Pipeline
         public string folder { get; set; }
     }
 
-    public class Pipeline
+    public class PipelineListResponse
     {
         public int count { get; set; }
         public List<PipelineItem> value { get; set; }
-    }
+    }     
 }
