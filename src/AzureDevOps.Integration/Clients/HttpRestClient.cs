@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
+[assembly: InternalsVisibleTo("AzureDevOps.Integration.REST.UnitTests")]
 namespace AzureDevOps.Integration.REST.Clients
 {
     public class HttpRestClient

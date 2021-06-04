@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientApiTest", "ClientApiT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDevOps.Integration.REST.UnitTests", "AzureDevOps.Integration.REST.UnitTests\AzureDevOps.Integration.REST.UnitTests.csproj", "{928FF98A-D0A5-48EE-A6B1-7D6D844E6F9B}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AzureDevOps.Integration.Database", "myDatabase\AzureDevOps.Integration.Database.sqlproj", "{1C898B54-84A2-4EED-AE20-34C70FEC54F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,12 @@ Global
 		{928FF98A-D0A5-48EE-A6B1-7D6D844E6F9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{928FF98A-D0A5-48EE-A6B1-7D6D844E6F9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{928FF98A-D0A5-48EE-A6B1-7D6D844E6F9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C898B54-84A2-4EED-AE20-34C70FEC54F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C898B54-84A2-4EED-AE20-34C70FEC54F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C898B54-84A2-4EED-AE20-34C70FEC54F7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1C898B54-84A2-4EED-AE20-34C70FEC54F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C898B54-84A2-4EED-AE20-34C70FEC54F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C898B54-84A2-4EED-AE20-34C70FEC54F7}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

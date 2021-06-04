@@ -34,7 +34,7 @@ namespace webApiTrader
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "webApiTrader", Version = "v1" });
             });
             services.AddSignalR();
-
+            services.AddHealthChecks();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,6 +59,9 @@ namespace webApiTrader
                 endpoints.MapHub<EquityTradeHub>("/equityTrades");
                 endpoints.MapHub<StreamingHub>("/streamingHub");
             });
+
+            app.UseHealthChecks("/healthz");
+
         }
     }
 }
