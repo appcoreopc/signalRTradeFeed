@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using webApiTrader.Configurations;
 using webApiTrader.Trades;
 
 namespace webApiTrader
@@ -34,6 +35,7 @@ namespace webApiTrader
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "webApiTrader", Version = "v1" });
             });
             services.AddSignalR();
+            services.Configure<ApplicationSettings>(Configuration.GetSection(ApplicationSettings.SettingName));
             services.AddHealthChecks();
         }
 
