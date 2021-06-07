@@ -4,8 +4,6 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using webApiTrader.Model;
 using webApiTrader.Trades;
 
 namespace webApiTrader.Controllers
@@ -32,7 +30,6 @@ namespace webApiTrader.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-
             _ctx.Clients.All.SendAsync("receivemessage", "test", "ulalalalalaa");
 
             var rng = new Random();

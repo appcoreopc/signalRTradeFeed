@@ -2,7 +2,8 @@
 using System.Threading.Tasks;
 
 namespace webApiTrader.Controllers
-{
+{   
+    [Route("Build")]
     public class BuildController : ControllerBase
     {
         [HttpPost]
@@ -13,14 +14,15 @@ namespace webApiTrader.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetPipeline()
+        public async Task<IActionResult> GetPipelinesInfo()
         {
             await Task.Delay(1000);
             return Ok();
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetPipelineStatus()
+        [Route("/{id}")]
+        public async Task<IActionResult> GetPipelineStatus(int id)
         {
             await Task.Delay(1000);
             return Ok();
