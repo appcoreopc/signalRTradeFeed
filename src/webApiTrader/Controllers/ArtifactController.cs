@@ -11,14 +11,14 @@ namespace webApiTrader.Controllers
     [Route("Artifact")]
     public class ArtifactController : ControllerBase
     {
-        public ApplicationSettings _settings { get; set; }
+        private ApplicationSettings _settings { get; set; }
 
         public ArtifactController(IOptions<ApplicationSettings> settings)
         {
             _settings = settings.Value;
         }
 
-        [HttpGet]
+        [HttpGet]        
         public async Task<IActionResult> GetProjects()
         {
             await Task.Delay(1000);
@@ -26,8 +26,8 @@ namespace webApiTrader.Controllers
         }
 
         [HttpGet]
-        [Route("/{id}")]
-        public async Task<IActionResult> GetProjectsById()
+        [Route("{id}")]
+        public async Task<IActionResult> GetProjectsById(int id)
         {
             await Task.Delay(1000);
             return Ok(DateTime.Now);
