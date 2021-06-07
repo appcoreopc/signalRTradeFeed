@@ -38,3 +38,6 @@ src/AzureDevOps.Integration.REST.UnitTests/bin/
 src/AzureDevOps.Integration.REST.UnitTests/obj/
 src/myDatabase/obj/
 src/myDatabase/bin/
+src/packages/
+src/webApiTrader.UnitTests/bin/
+src/webApiTrader.UnitTests/obj/
