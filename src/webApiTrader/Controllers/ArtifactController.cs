@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AzureDevOps.Integration.DataProviders;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using System;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using webApiTrader.Configurations;
 
@@ -12,22 +14,29 @@ namespace webApiTrader.Controllers
     public class ArtifactController : ControllerBase
     {
         private ApplicationSettings _settings { get; set; }
-
-        public ArtifactController(IOptions<ApplicationSettings> settings)
+        private BuildDataContext _context;
+        public ArtifactController(IOptions<ApplicationSettings> settings, BuildDataContext context)
         {
             _settings = settings.Value;
+            _context = context;
         }
 
-        [HttpGet]        
+        [HttpGet]
+        [Route("Artifact/")]
         public async Task<IActionResult> GetProjects()
         {
+            using (_context)
+            {
+                _context.Blogs.Where(x => x.BlogId == 1);
+            };
+
             await Task.Delay(1000);
             return Ok(DateTime.Now);
         }
 
         [HttpGet]
         [Route("{id}")]
-        public async Task<IActionResult> GetProjectsById(int id)
+        public async Task<IActionResult> GetArtifactByProjectId(int id)
         {
             await Task.Delay(1000);
             return Ok(DateTime.Now);

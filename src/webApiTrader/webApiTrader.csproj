@@ -6,4 +6,7 @@
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Core" Version="1.1.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AzureDevOps.Integration.DataProviders\AzureDevOps.Integration.DataProviders.csproj" />
+  </ItemGroup>
 </Project>

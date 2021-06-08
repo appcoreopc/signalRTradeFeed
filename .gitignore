@@ -41,3 +41,7 @@ src/myDatabase/bin/
 src/packages/
 src/webApiTrader.UnitTests/bin/
 src/webApiTrader.UnitTests/obj/
+src/AzureDevOps.Integration.DataProviders/obj/
+src/AzureDevOps.Integration.DataProviders/bin/
+src/myDatabase/AzureDevOps.Integration.Database.dbmdl
+src/myDatabase/AzureDevOps.Integration.Database.jfm

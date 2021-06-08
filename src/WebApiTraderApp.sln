@@ -17,6 +17,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AzureDevOps.Integration.Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webApiTrader.UnitTests", "webApiTrader.UnitTests\webApiTrader.UnitTests.csproj", "{972F6961-597B-4B9F-AFDC-7416704C47E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDevOps.Integration.DataProviders", "AzureDevOps.Integration.DataProviders\AzureDevOps.Integration.DataProviders.csproj", "{2768EB53-BD5D-4BA5-9533-6798B545EBFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{972F6961-597B-4B9F-AFDC-7416704C47E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{972F6961-597B-4B9F-AFDC-7416704C47E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{972F6961-597B-4B9F-AFDC-7416704C47E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2768EB53-BD5D-4BA5-9533-6798B545EBFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2768EB53-BD5D-4BA5-9533-6798B545EBFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2768EB53-BD5D-4BA5-9533-6798B545EBFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2768EB53-BD5D-4BA5-9533-6798B545EBFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

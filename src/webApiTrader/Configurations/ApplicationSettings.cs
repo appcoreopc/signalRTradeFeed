@@ -5,5 +5,8 @@ namespace webApiTrader.Configurations
     {
         public const string SettingName = "Application";
         public string ImagePath { get; set; }
+    
+        public string PatToken { get; set; }
+
     }
 }
