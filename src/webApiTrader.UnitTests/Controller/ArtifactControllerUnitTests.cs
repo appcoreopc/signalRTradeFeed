@@ -4,14 +4,15 @@ using webApiTrader.Controllers;
 using Microsoft.Extensions.Options;
 using webApiTrader.Configurations;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 
 namespace webApiTrader.UnitTests.Controller
 {
     [TestClass]
-    public class ArtifactControllerTests
-    {
+    public class ArtifactControllerUnitTests
+	{
 		[TestMethod]
-		public async Task TestMethod1()
+		public async Task WhenGetProjectsCalled_Then_Return_JsonResult()
 		{
 			// Arrange
 			var mockRepo = new Mock<IOptions<ApplicationSettings>>();
@@ -23,12 +24,7 @@ namespace webApiTrader.UnitTests.Controller
 			var result = await controller.GetProjects();
 
 			// Assert
-			//var viewResult = Assert.IsType<ViewResult>(result);
-			//var model = Assert.IsAssignableFrom<IEnumerable<StormSessionViewModel>>(
-			//    viewResult.ViewData.Model);
-			//Assert.Equal(2, model.Count());
-
-			Assert.IsTrue(true);
+			Assert.IsInstanceOfType(result, typeof(OkObjectResult));
 		}
     }
 }
